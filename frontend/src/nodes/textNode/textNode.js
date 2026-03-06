@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useMemo, memo, useLayoutEffect } from 'react';
+import { useState, useRef, useEffect, useMemo, memo } from 'react';
 import { BaseNode } from '../BaseNode';
 import { useUpdateNodeInternals } from 'reactflow';
 import { useTextNodeConnections } from './hooks/useTextNodeConnections';
@@ -33,7 +33,7 @@ export const TextNode = memo(({ id, data }) => {
                 updateNodeInternals(id);
             }
         }
-    }, [currText, id, updateNodeInternals]);
+    }, [currText, id, updateNodeInternals, nodeWidth]);
 
     // Consolidated Handle Generation
     const handles = useMemo(() => {

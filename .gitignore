@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/vector/
+__pycache__/
+
+# Build
+frontend/build/
+
+# Misc
+.DS_Store
+frontend/.DS_Store

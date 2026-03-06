@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useStore } from '../../../store';
 import { handleMap } from '../../constants/constants';
 
@@ -47,7 +47,7 @@ export const useTextNodeConnections = ({ id, currText }) => {
         }
 
         return JSON.stringify(result);
-    }, [getMatchesString, id, nodes.length]);
+    }, [getMatchesString, id, nodes]);
 
     const rawVariables = useMemo(() => JSON.parse(rawVariablesString), [rawVariablesString]);
 
@@ -81,7 +81,7 @@ export const useTextNodeConnections = ({ id, currText }) => {
                 }, 50);
             }
         });
-    }, [id, rawVariables, onConnect, edges.length]);
+    }, [id, rawVariables, onConnect, edges]);
 
     return { rawVariables };
 };
