@@ -1,0 +1,24 @@
+# Dependency directories
+node_modules/
+backend/vector/
+__pycache__/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+backend/vector/
+frontend/node_modules/
